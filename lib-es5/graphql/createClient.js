@@ -79,7 +79,7 @@ var createClient = function (projectConfig) {
                         options = __assign(__assign({}, clientConfig.options), { method: "POST", body: JSON.stringify({
                                 query: query,
                                 variables: variables,
-                            }) });
+                            }), cache: 300 });
                         _c.label = 1;
                     case 1:
                         _c.trys.push([1, 4, , 5]);

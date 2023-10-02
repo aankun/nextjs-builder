@@ -48,6 +48,7 @@ const createClient = (projectConfig: ProjectConfig) => {
         query,
         variables,
       }),
+      cache: 300
     }
     try {
       const res = await fetch(clientConfig.endpoint, options)
