@@ -86,7 +86,7 @@ export const scaffoldPages = (ssConfig: ProjectConfig) => {
   const api = createClient(ssConfig)
   api.query(query, variables).then(result => {
     result.generateFragments.forEach((result: FragmentResult) => {
-      if (ignore.includes(result.type)) {
+      if (ignore?.includes(result.type)) {
         return
       }
 

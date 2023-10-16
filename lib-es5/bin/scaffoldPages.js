@@ -62,7 +62,7 @@ var scaffoldPages = function (ssConfig) {
     var api = (0, createClient_1.default)(ssConfig);
     api.query(query, variables).then(function (result) {
         result.generateFragments.forEach(function (result) {
-            if (ignore.includes(result.type)) {
+            if (ignore === null || ignore === void 0 ? void 0 : ignore.includes(result.type)) {
                 return;
             }
             var pageDir = path_1.default.join(absComponentsPath, result.type);
